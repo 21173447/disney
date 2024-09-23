@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 
-
-
 const Hero = () => {
   const [search, setSearch] = useState('');
   const [characters, setCharacters] = useState([]);
@@ -17,7 +15,7 @@ const Hero = () => {
     setSearch(e.target.value);
   };
 
-  // Handle search and API call
+
   const handleSearch = async () => {
     if (!search) {
       alert('Please enter a search term');
@@ -26,6 +24,7 @@ const Hero = () => {
 
     setLoading(true);
     setError(null);
+
 
     // fetching the data that is to be disyed when  searching
     try {
@@ -40,12 +39,11 @@ const Hero = () => {
 
   const Count = characters && characters.length;
 
+
   return (
     <>
       <section className='relative h-[50vh] bg-hero'>
        
-
-
         <div className='text-center py-8 space-y-4 relative text-black '>
           <h2 className='text-6xl text-white '>
             Explore your Favourite 
@@ -68,23 +66,23 @@ const Hero = () => {
             </button>
           </div>
 
-          {loading && <p className='text-glitch'>Searching...</p>}
+
+          {loading && <p className='text-white'>Searching...</p>}
           {error && <p>{error}</p>}
 
           {Count > 0 && (
-            <ul className="grid grid-cols-2 relative z-30 w-full h-[500px] bg-white  place-items-center sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 py-10">
+            <ul className="grid grid-cols-2 relative z-30 w-full h-[1000px] bg-white  place-items-center sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 py-10">
               {characters.map((character) => (
                 <li key={character._id} className="border-black p-4 ">
                   <img
                     src={character.imageUrl}
                     alt={character.name}
-                    className="w-40 h-40 rounded-3xl  hover:translate-x-1 translate-y-1  duration-300"
+                    className="w-40 h-40 rounded-3xl  hover:translate-x-1 translate-y-1 duration-300"
                   />
                   <h2 className="text-lg  ">{character.name}</h2>
                   <a
                     href={character.sourceUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className='text-blue-500 hover:underline  text-sm'
                   >
                     Read more

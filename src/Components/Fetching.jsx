@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate';
 import { HiArrowSmRight } from "react-icons/hi";
 import Spinner from './Spinner';
 
+
 const Fetching = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,8 +31,9 @@ const Fetching = () => {
 
   if (loading) return <p><Spinner /></p>;
   if (error) return <p>{error}</p>;
- //pagination 
 
+
+ //pagination 
   const pageCount = Math.ceil(characters.length  / itemsPerPage);
   const currentCharacters = characters.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
@@ -59,6 +61,7 @@ const Fetching = () => {
               <p> <span className='text-gray-400 font-semibold text-[10px]'>Updated: </span><span className='text-[10px]'>{character.updatedAt}</span></p>
               <p><span className='text-gray-400 font-semibold text-[10px]'>Show: </span><span className='text-[13px]'>{character.tvShows}</span></p>
             </div>
+
             <div className='p-1'>
               <a
                 href={character.sourceUrl}
@@ -68,6 +71,7 @@ const Fetching = () => {
                 <div class="flex items-center">
                   Read more <HiArrowSmRight className='mt-1 ml-1' />
                 </div>
+
               </a>
             </div>
           </li>
