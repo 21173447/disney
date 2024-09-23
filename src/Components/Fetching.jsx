@@ -12,7 +12,8 @@ const Fetching = () => {
 
  
   const itemsPerPage = 10;
-  const apiUrl = "http://api.disneyapi.dev/character?page=2&pageSize=149";
+  const apiUrl = 'https://api.disneyapi.dev/character?page=2&pageSize=149';
+
 
   useEffect(() => {
     axios.get(apiUrl)
