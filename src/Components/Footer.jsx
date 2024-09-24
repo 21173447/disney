@@ -14,7 +14,7 @@ const Footer = () => {
         <FaLinkedin className="text-3xl hover:scale-125 transform transition-transform duration-300" />
        </a>
 
-       <a href="" target="_blank" >
+       <a href="https://github.com/21173447/disney.git" target="_blank" >
         <FaGithub className="text-3xl hover:scale-125 transform transition-transform duration-300" />
        </a>
 
