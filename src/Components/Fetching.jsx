@@ -58,7 +58,7 @@ const Fetching = () => {
           <hr class=" border-[3px]  w-32 flex  border-white " />
         </div>
       </p>
-      <div className='grid grid-cols-2 place-items-center  px-28 sm:grid-cols-2 sm:px-0 md:grid-cols-4 lg:grid-cols-5 gap-2 py-10 '  >
+      <div className='grid grid-cols-2 place-items-center  lg:px-28 sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 gap-2 py-10 '  >
 
         {currentCharacters.map(character => (
 
