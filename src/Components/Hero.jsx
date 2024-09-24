@@ -41,7 +41,8 @@ const Hero = () => {
 
   return (
     <>
-      <section className='relative h-[50vh]  bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+      <section className='relative h-[50vh]  bg-hero  bg-cover bg-fixed'>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
        
         <div className='text-center py-8 space-y-4 relative text-black '>
           <h2 className='text-6xl text-white '>
@@ -84,7 +85,7 @@ const Hero = () => {
                   <a
                     href={character.sourceUrl}
                     target="_blank"
-                    className='text-blue-500 hover:underline  text-sm'
+                    className='text-purple-700 hover:underline  text-sm'
                   >
                     Read more
                   </a>

@@ -9,14 +9,14 @@ export default {
      
 
       backgroundImage: {
-        'hero': "url('/src/images/87407.jpg')",
+        'hero': "url('/src/images/pexels-ithalu-907485.jpg')",
        
        
       },
     },
   },
   plugins: [
-    require("@designbycode/tailwindcss-text-glitch"),
+
 
   ],
 }
