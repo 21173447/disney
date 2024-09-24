@@ -6,8 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+     
+
       backgroundImage: {
         'hero': "url('/src/images/87407.jpg')",
+       
+       
       },
     },
   },
